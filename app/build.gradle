@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
     defaultConfig {
-        applicationId "me.lixinwei.gankio"
-        minSdkVersion 19
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -21,10 +21,20 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
+
+    compile rootProject.ext.dependencies.support_v4
+    compile rootProject.ext.dependencies.appcompat_v7
+    compile rootProject.ext.dependencies.design
+    compile rootProject.ext.dependencies.recyclerview_v7
+    compile rootProject.ext.dependencies.support_annotations
+
+    compile rootProject.ext.dependencies.arch_runtime
+    compile rootProject.ext.dependencies.arch_extensions
+    annotationProcessor rootProject.ext.dependencies.arch_processor
+
+    compile rootProject.ext.dependencies.retrofit
+    compile rootProject.ext.dependencies.adapter_rxjava
+    compile rootProject.ext.dependencies.converter_gson
+
+    compile rootProject.ext.dependencies.gson
 }
