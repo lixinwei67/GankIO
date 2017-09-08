@@ -14,34 +14,43 @@ project.ext {
     ]
 
     depsVersion = [
-            supportVersion : "26.0.0-alpha1",
+            supportVersion    : "26.0.0-alpha1",
 
             //arch
             archVersion       : "1.0.0-alpha9",
 
             //http
-            retrofitVersion:"2.3.0",
+            retrofitVersion   : "2.3.0",
+
+            butterknifeVersion: "8.8.1",
     ]
 
     dependencies = [
-            support_v4                  : "com.android.support:support-v4:${depsVersion.supportVersion}",
-            appcompat_v7                : "com.android.support:appcompat-v7:${depsVersion.supportVersion}",
-            design                      : "com.android.support:design:${depsVersion.supportVersion}",
-            recyclerview_v7             : "com.android.support:recyclerview-v7:${depsVersion.supportVersion}",
-            support_annotations         : "com.android.support:support-annotations:${depsVersion.supportVersion}",
+            support_v4           : "com.android.support:support-v4:${depsVersion.supportVersion}",
+            appcompat_v7         : "com.android.support:appcompat-v7:${depsVersion.supportVersion}",
+            design               : "com.android.support:design:${depsVersion.supportVersion}",
+            recyclerview_v7      : "com.android.support:recyclerview-v7:${depsVersion.supportVersion}",
+            support_annotations  : "com.android.support:support-annotations:${depsVersion.supportVersion}",
 
             // ------------------- Arch ---------------------------
-            arch_runtime                : "android.arch.lifecycle:runtime:${depsVersion.archVersion}",
-            arch_extensions             : "android.arch.lifecycle:extensions:${depsVersion.archVersion}",
-            arch_processor              : "android.arch.lifecycle:compiler:${depsVersion.archVersion}",
+            arch_runtime         : "android.arch.lifecycle:runtime:${depsVersion.archVersion}",
+            arch_extensions      : "android.arch.lifecycle:extensions:${depsVersion.archVersion}",
+            arch_processor       : "android.arch.lifecycle:compiler:${depsVersion.archVersion}",
 
             //gson
-            gson                        : "com.google.code.gson:gson:2.6.2",
+            gson                 : "com.google.code.gson:gson:2.6.2",
 
-            retrofit                    : "com.squareup.retrofit2:retrofit:${depsVersion.retrofitVersion}",
-            adapter_rxjava              : "com.squareup.retrofit2:adapter-rxjava:${depsVersion.retrofitVersion}",
-            converter_gson              : "com.squareup.retrofit2:converter-gson:${depsVersion.retrofitVersion}",
+            retrofit             : "com.squareup.retrofit2:retrofit:${depsVersion.retrofitVersion}",
+            adapter_rxjava       : "com.squareup.retrofit2:adapter-rxjava:${depsVersion.retrofitVersion}",
+            converter_gson       : "com.squareup.retrofit2:converter-gson:${depsVersion.retrofitVersion}",
+            okhttp               : "com.squareup.okhttp3:okhttp:3.6.0",
+            okhttp_logging       : "com.squareup.okhttp3:logging-interceptor:3.6.0",
 
+            multitype            : "me.drakeet.multitype:multitype:3.0.0",
 
+            butterknife          : "com.jakewharton:butterknife:${depsVersion.butterknifeVersion}",
+            butterknife_processor: "com.jakewharton:butterknife-compiler:${depsVersion.butterknifeVersion}",
+
+            litepal              : "org.litepal.android:core:1.6.0",
     ]
 }
